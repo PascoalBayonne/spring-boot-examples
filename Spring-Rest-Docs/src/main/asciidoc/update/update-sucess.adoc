@@ -1,0 +1,23 @@
+
+== PUT
+
+Update customer by id. The operation receives a customer to update in the body and the target customer unique identifier.
+This API operation returns the newly updated customer's.
+
+
+.Request
+
+include::{snippets}/update-accepted/http-request.adoc[]
+
+.Response
+
+include::{snippets}/update-accepted/http-response.adoc[]
+
+
+.Response-Fields
+
+include::{snippets}/update-accepted/response-fields.adoc[]
+
+
+.cURL
+include::{snippets}/update-accepted/curl-request.adoc[]

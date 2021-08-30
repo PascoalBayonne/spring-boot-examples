@@ -1,0 +1,30 @@
+
+
+== POST
+
+
+This method creates a brand-new customer. The operation inits by validating all required customer
+fields, in case of success the operation consults KYC APIs in order to complete
+the operation. A business error is being returned if the customer does not fulfil the criteria.
+
+This API operation returns the newly created customer's id in header.
+
+
+.Request
+
+include::{snippets}/create-ok/http-request.adoc[]
+
+.Response
+
+include::{snippets}/create-ok/http-response.adoc[]
+
+
+
+
+.Response-Header
+
+include::{snippets}/create-ok/response-headers.adoc[]
+
+
+.cURL
+include::{snippets}/create-ok/curl-request.adoc[]

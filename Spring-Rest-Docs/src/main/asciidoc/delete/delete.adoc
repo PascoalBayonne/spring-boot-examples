@@ -1,0 +1,19 @@
+
+== DELETE
+
+Delete customer by id. Based on a specific id this operation starts by validating if the customer exists.
+In case of existence of the customer by provided id, the application computes the deletion. Otherwise, it throws
+an exception with detailed info.
+
+
+.Request
+
+include::{snippets}/delete-by-id/http-request.adoc[]
+
+.Response
+
+include::{snippets}/delete-by-id/http-response.adoc[]
+
+
+.cURL
+include::{snippets}/delete-by-id/curl-request.adoc[]

@@ -1,0 +1,17 @@
+
+== GET
+
+This method returns all existing customers. When there are not any customer the api
+return an empty array.
+
+.Request
+
+include::{snippets}/find-all-ok/http-request.adoc[]
+
+.Response
+
+include::{snippets}/find-all-ok/http-response.adoc[]
+
+
+.cURL
+include::{snippets}/find-all-ok/curl-request.adoc[]

@@ -1,0 +1,20 @@
+
+
+== GET
+
+Based on a customer unique identifier, this api operation allows the fetch of a customer by its unique identifier.
+The operation starts its flow by validation if customer exists by id. Returns the customer if exists else
+it returns an api error with detailed info.
+
+.Request
+
+include::{snippets}/find-all-ok/http-request.adoc[]
+
+.Response
+
+include::{snippets}/find-by-id-ok/http-response.adoc[]
+
+include::{snippets}/find-by-id-ok/response-fields.adoc[]
+
+.cURL
+include::{snippets}/find-by-id-ok/curl-request.adoc[]

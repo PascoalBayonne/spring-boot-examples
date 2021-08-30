@@ -1,0 +1,131 @@
+== Customer Care Microservice ==
+=== Technical Specification of CustomerCare REST APIs ===
+
+:sectnums:
+:sectnumlevels: 5
+:toc: left
+:toclevels: 3
+:page-layout: docs
+
+
+[Overview]
+== Overview
+
+CustomerCare microservice belongs to KYC-Domain. The CustomerCare is responsible to provide all operations related to Customer.
+The entire microservice provides CRUD operations exposed through RESTFul APIs as below examples.
+
+
+
+== POST
+
+
+This method creates a brand-new customer. The operation inits by validating all required customer
+fields, in case of success the operation consults KYC APIs in order to complete
+the operation. A business error is being returned if the customer does not fulfil the criteria.
+
+This API operation returns the newly created customer's id in header.
+
+
+.Request
+
+include::{snippets}/create-ok/http-request.adoc[]
+
+.Response
+
+include::{snippets}/create-ok/http-response.adoc[]
+
+
+
+
+.Response-Header
+
+include::{snippets}/create-ok/response-headers.adoc[]
+
+
+.cURL
+include::{snippets}/create-ok/curl-request.adoc[]
+
+
+== GET
+
+This method returns all existing customers. When there are not any customer the api
+return an empty array.
+
+.Request
+
+include::{snippets}/find-all-ok/http-request.adoc[]
+
+.Response
+
+include::{snippets}/find-all-ok/http-response.adoc[]
+
+
+.cURL
+include::{snippets}/find-all-ok/curl-request.adoc[]
+
+
+
+== GET
+
+Based on a customer unique identifier, this api operation allows the fetch of a customer by its unique identifier.
+The operation starts its flow by validation if customer exists by id. Returns the customer if exists else
+it returns an api error with detailed info.
+
+.Request
+
+include::{snippets}/find-all-ok/http-request.adoc[]
+
+.Response
+
+include::{snippets}/find-by-id-ok/http-response.adoc[]
+
+include::{snippets}/find-by-id-ok/response-fields.adoc[]
+
+.cURL
+include::{snippets}/find-by-id-ok/curl-request.adoc[]
+
+
+== PUT
+
+Update customer by id. The operation receives a customer to update in the body and the target customer unique identifier.
+This API operation returns the newly updated customer's.
+
+
+.Request
+
+include::{snippets}/update-accepted/http-request.adoc[]
+
+.Response
+
+include::{snippets}/update-accepted/http-response.adoc[]
+
+
+.Response-Fields
+
+include::{snippets}/update-accepted/response-fields.adoc[]
+
+
+.cURL
+include::{snippets}/update-accepted/curl-request.adoc[]
+
+
+== DELETE
+
+Delete customer by id. Based on a specific id this operation starts by validating if the customer exists.
+In case of existence of the customer by provided id, the application computes the deletion. Otherwise, it throws
+an exception with detailed info.
+
+
+.Request
+
+include::{snippets}/delete-by-id/http-request.adoc[]
+
+.Response
+
+include::{snippets}/delete-by-id/http-response.adoc[]
+
+
+.cURL
+include::{snippets}/delete-by-id/curl-request.adoc[]
+
+
